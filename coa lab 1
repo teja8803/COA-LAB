@@ -1,0 +1,23 @@
+1. Write a program in assembly language to print “Hello World”.  
+Code: org 
+100h jmp 
+start  
+msg: db "Hello World",0Dh,0Ah,24h  
+start:mov dx,msg ; Load the effective address of msg into DX 
+mov ah,09h ; DOS function to display string  
+int 21h ; Call DOS interrupt to print the string 
+mov ah,0 ; Prepare for keyboard input 
+int 16h ; Wait for a key press 
+ret 
+
+
+2. Write an assembly language program to print your name.  
+Code: org 
+100h jmp 
+start  
+msg: db "Teja ",0Dh,0Ah,24h 
+start:mov dx,msg ; Load the effective address of msg intoDX 
+mov ah,09h ; DOS function to display string 
+int 21h ; Call DOS interrupt to print the string  
+mov ah,0 ; Prepare for keyboard input 
+int 16h ; Wait for a key press ret  
